@@ -60,3 +60,21 @@ describe('Helpers tests for appendTd', function () {
         value = undefined;
     })
 })
+
+describe('Helpers test for appendRemoveBtn', function () {
+    beforeEach(function () {
+        // initialize a tr
+        tr = document.createElement('tr');
+        tr.id = 'dummy-tr';
+    })
+
+    it('elements should be nested', function () {
+        appendRemoveBtn(tr);
+        
+        expect(tr.innerHTML).toBe('<td>X</td>');
+    })
+
+    afterEach(function () {
+        tr = undefined;
+    })
+})
